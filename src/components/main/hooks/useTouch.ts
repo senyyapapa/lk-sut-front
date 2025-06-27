@@ -13,8 +13,8 @@ interface TouchHandlers {
 interface UseTouchProps {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
-  onDrag?: (offset: number) => void; // Новый колбек для захватывания
-  onDragEnd?: () => void; // Колбек для окончания захватывания
+  onDrag?: (offset: number) => void; 
+  onDragEnd?: () => void; 
   threshold?: number;
 }
 
@@ -44,10 +44,9 @@ export const useTouch = ({
     const deltaX = touchStart.current.x - clientX;
     const deltaY = touchStart.current.y - clientY;
     
-    // Проверяем, что движение больше горизонтальное, чем вертикальное
+
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
       hasMoved.current = true;
-      // Вызываем колбек для захватывания с текущим смещением
       if (onDrag) {
         onDrag(deltaX);
       }
@@ -60,14 +59,12 @@ export const useTouch = ({
       return;
     }
 
-    // Если было движение с захватыванием
     if (hasMoved.current && touchEnd.current) {
       const distanceX = touchStart.current.x - touchEnd.current.x;
       const distanceY = touchStart.current.y - touchEnd.current.y;
       const absDistanceX = Math.abs(distanceX);
       const absDistanceY = Math.abs(distanceY);
 
-      // Проверяем, достаточно ли смещения для переключения слайда
       if (absDistanceX > absDistanceY && absDistanceX > threshold) {
         if (distanceX > 0) {
           onSwipeLeft();
@@ -77,7 +74,6 @@ export const useTouch = ({
       }
     }
 
-    // Вызываем колбек окончания захватывания
     if (onDragEnd) {
       onDragEnd();
     }

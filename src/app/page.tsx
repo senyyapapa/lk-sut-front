@@ -20,7 +20,7 @@ export default function Home(){
       groupNumber: '204/2',
       studentName: 'Петров В.Г',
       subject: 'Физика',
-      lessonType: 'семинар'
+      lessonType: 'практика'
     },
     {
       id: '3',

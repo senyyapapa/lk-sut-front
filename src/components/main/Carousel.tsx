@@ -11,16 +11,16 @@ const Carousel: React.FC<CarouselProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [dragOffset, setDragOffset] = useState(0); // Смещение при захватывании
-  const [isDragging, setIsDragging] = useState(false); // Флаг захватывания
+  const [dragOffset, setDragOffset] = useState(0); 
+  const [isDragging, setIsDragging] = useState(false); 
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Создаем бесконечную карусель, добавляя копии слайдов
+
   const extendedSlides = [
-    slides[slides.length - 1], // последний слайд в начале
+    slides[slides.length - 1],
     ...slides,
-    slides[0] // первый слайд в конце
+    slides[0]
   ];
 
   const goToSlide = useCallback((index: number, withTransition = true) => {
@@ -38,7 +38,6 @@ const Carousel: React.FC<CarouselProps> = ({
     const nextIndex = currentIndex + 1;
     goToSlide(nextIndex);
     
-    // Если дошли до конца, возвращаемся к началу без анимации
     if (nextIndex === extendedSlides.length - 1) {
       setTimeout(() => {
         goToSlide(1, false);
@@ -50,7 +49,6 @@ const Carousel: React.FC<CarouselProps> = ({
     const prevIndex = currentIndex - 1;
     goToSlide(prevIndex);
     
-    // Если дошли до начала, переходим к концу без анимации
     if (prevIndex === 0) {
       setTimeout(() => {
         goToSlide(extendedSlides.length - 2, false);
@@ -59,29 +57,26 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [currentIndex, extendedSlides.length, goToSlide]);
 
   const goToSpecificSlide = useCallback((index: number) => {
-    goToSlide(index + 1); // +1 потому что у нас есть дополнительный слайд в начале
+    goToSlide(index + 1); 
   }, [goToSlide]);
 
-  // Определяем реальный индекс для индикаторов
+
   const getRealIndex = useCallback(() => {
     if (currentIndex === 0) return slides.length - 1;
     if (currentIndex === extendedSlides.length - 1) return 0;
     return currentIndex - 1;
   }, [currentIndex, slides.length, extendedSlides.length]);
 
-  // Колбек для изменения слайда
   useEffect(() => {
     if (onSlideChange) {
       onSlideChange(getRealIndex());
     }
   }, [currentIndex, onSlideChange, getRealIndex]);
 
-  // Инициализация позиции
   useEffect(() => {
     goToSlide(1, false);
   }, []);
 
-  // Обработчики для захватывания
   const handleDrag = useCallback((offset: number) => {
     if (!carouselRef.current) return;
     
@@ -115,10 +110,9 @@ const Carousel: React.FC<CarouselProps> = ({
 
   const handleMarkAttendance = (slideData: SlideData) => {
     console.log('Отметиться на:', slideData);
-    // Здесь будет логика отметки посещения
+    //TODO: Добавить логиику для отметки на занятии
   };
 
-  // Вычисляем финальное смещение с учетом захватывания
   const getTransform = useCallback(() => {
     const baseTransform = -currentIndex * 100;
     const dragTransform = isDragging ? -(dragOffset / (carouselRef.current?.offsetWidth || 1)) * 100 : 0;
@@ -170,7 +164,7 @@ const Carousel: React.FC<CarouselProps> = ({
         ))}
       </div>
       
-      {/* Индикаторы */}
+
       <div className={styles.indicators}>
         {slides.map((_, index) => (
           <button

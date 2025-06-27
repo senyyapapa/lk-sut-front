@@ -192,15 +192,15 @@
 
   .lection{
     @extend %lessonType;
-    background-color: rgb(91, 148, 233);
+    background-color: rgb(32, 90, 215);//rgb(91, 148, 233);
   }
   .practice{
     @extend %lessonType;
-    background-color: rgb(255, 196, 86);
+    background-color: rgb(192, 149, 69);
   }
   .lab{
     @extend %lessonType;
-    background-color: rgb(255, 78, 78);
+    background-color: rgb(189, 61, 61);
   }
 
   .navigationArrows {
