@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Sidebar from "@/components/sidebar/Sidebar";
+import BurgerBtn from "@/components/burger_button/BurgerBtn";
+
+
 
 
 export const metadata: Metadata = {
@@ -17,6 +21,7 @@ export default function RootLayout({
     <html lang="ru">
       <body
       >
+        <Sidebar />
         <Header />
         <main>{children}</main>
       </body>

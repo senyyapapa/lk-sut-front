@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect, useCallback, useRef, use } from 'react';
-import { CarouselProps, SlideData } from './interfaces/types';
-import { useTouch } from './hooks/useTouch';
+import { CarouselProps, SlideData } from '../interfaces/types';
+import { useTouch } from '../hooks/useTouch';
 import styles from './CarouselStyles.module.scss';
-import { enableScroll, disableScroll } from './utils/scrollControl';
+import { enableScroll, disableScroll } from '../utils/scrollControl';
 
 const Carousel: React.FC<CarouselProps> = ({ 
   slides, 
@@ -145,7 +145,7 @@ const Carousel: React.FC<CarouselProps> = ({
             </div>
             
             <div className={styles.slideFooter}>
-              <div className={`${styles.markButton} ${
+              <div className={`${
                 slide.lessonType === 'лекция' ? styles.lection :
                 slide.lessonType === 'практика' ? styles.practice :
                 slide.lessonType === 'лабораторная' ? styles.lab :
@@ -164,7 +164,6 @@ const Carousel: React.FC<CarouselProps> = ({
         ))}
       </div>
       
-
       <div className={styles.indicators}>
         {slides.map((_, index) => (
           <button

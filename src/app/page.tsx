@@ -1,10 +1,25 @@
 // App.tsx - Пример использования
 'use client';
 import React from 'react';
-import Carousel from '../components/main/Carousel';
+import Carousel from '../components/main/carousel/Carousel';
 import { SlideData } from '../components/main/interfaces/types';
+import LastMessages from '@/components/main/last_messages/LastMessages';
 
 export default function Home(){
+    const messages = new Map([
+      ['Аль-Нами', 'Церемония награждения'],
+      ['Акимов', 'Правила проведения мероприятия'],
+      ['Шабанов', 'Лабораторная работа №2'],
+      ['Ликарь', 'Шаблон отчета практического занятия'],
+      ['Любимов', 'Учебник_2024_01_02']
+    ]);
+    const news = new Map([
+  ['Регистрация на семестр открыта', 'Открыта регистрация на весенний семестр — успей подать заявку!'],
+  ['Новые учебники в библиотеке', 'В библиотеке появились новые пособия по программированию.'],
+  ['Карьерная ярмарка на следующей неделе', 'Приходи на карьерную ярмарку в следующую среду и познакомься с работодателями.'],
+  ['Стартует конкурс научных проектов', 'Скоро начинается конкурс научных проектов — готовь свои идеи!'],
+  ['Обновлено расписание занятий', 'Проверь новое расписание занятий на следующий месяц в своей группе.']
+])
   const slidesData: SlideData[] = [
     {
       id: '1',
@@ -53,11 +68,15 @@ export default function Home(){
   };
 
   return (
-    <div className='flex justify-center items-center'>
-        <Carousel 
+    <div className='flex justify-center flex-col items-center gap-6'>
+        <div className='mb-4 mt-[8vh]'>
+          <Carousel 
           slides={slidesData}
           onSlideChange={handleSlideChange}
         />
+        </div>
+        <LastMessages label={"Последние сообщения"} info_list={messages} />
+        <LastMessages label={"Новости"} info_list={news} />
     </div>
   );
 };

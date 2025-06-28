@@ -1,0 +1,60 @@
+.sidebar-window{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 998;
+}
+.sidebar-open{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 75%;
+    background-color:rgb(255, 255, 255);
+    position: fixed;
+    animation-name: sidebarOpen;
+    animation-duration: 0.5s;
+    z-index: 999;
+}
+
+
+
+.sidebar-close{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    animation-name: shadowOpen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index:998;
+}
+
+
+
+@keyframes sidebarOpen {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shadowOpen {
+    0% {
+        width: 100%;
+        opacity: 0;
+    }
+
+    100%{
+        width: 25%;
+        opacity: 0.5;
+    }
+    
+}
