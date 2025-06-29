@@ -149,6 +149,9 @@ const Carousel: React.FC<CarouselProps> = ({
                 slide.lessonType === 'лекция' ? styles.lection :
                 slide.lessonType === 'практика' ? styles.practice :
                 slide.lessonType === 'лабораторная' ? styles.lab :
+                slide.lessonType === 'экзамен' ? styles.ekz :
+                slide.lessonType === 'зачет' ? styles.zach :
+
                 ''
                 }`}>
                   {slide.lessonType}

@@ -1,0 +1,70 @@
+.news-list-container {
+    display: flex;
+    background-color: #dbd9d9;
+    height: 8vh;
+    width: 90vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.label-news {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15vw;
+}
+
+.news-list {
+    width: 90vw;
+    background-color: transparent;
+    margin-top: 2vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 4vh;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    background-color: whitesmoke;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 2vh;
+    box-shadow: 6px 12px 25px 6px rgb(0 0 0 / 0.25);
+}
+
+.headers-font {
+    font-weight: bolder;
+}
+
+.description-font {
+    font-weight: 500;
+}
+
+.news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.news-date {
+    font-size: 0.875rem; // или другой подходящий
+    color: #555;
+}
+
+.news-status {
+    background-color: #1f47ca; // соответствует bg-blue-700
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
