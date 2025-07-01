@@ -29,18 +29,15 @@ export default function LoginPage() {
 
   const onSubmit: SubmitHandler<LoginFormValues> = async (data) => {
     try {
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+      const response = await axios.post('/api/login', {
+        email: data.email,
+        password: data.password
       })
 
-      if (response.ok) {
+      if (response.data) {
         router.push('/')
       } else {
-        const errorData = await response.json()
+        const errorData = await response.data
         alert(errorData.error || 'Ошибка входа')
       }
     } catch (error) {
