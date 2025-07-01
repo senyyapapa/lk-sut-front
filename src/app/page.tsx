@@ -14,7 +14,7 @@ export default function Home(){
       currentInfo: 'Сейчас: 106/1',
       groupNumber: '106/1',
       studentName: 'Алексеев А.Б',
-      subject: 'Высшая математика',
+      subject: 'Универсальные программируемые интегральные схемы в киберфизических системах',
       lessonType: 'лекция'
     },
     {
@@ -22,7 +22,7 @@ export default function Home(){
       currentInfo: 'Сейчас: 204/2',
       groupNumber: '204/2',
       studentName: 'Петров В.Г',
-      subject: 'Физика',
+      subject: 'Интеллектуальные информационные системы и технологии',
       lessonType: 'практика'
     },
     {
@@ -30,7 +30,7 @@ export default function Home(){
       currentInfo: 'Сейчас: 301/3',
       groupNumber: '301/3',
       studentName: 'Иванова М.С',
-      subject: 'Технологии распределенны',
+      subject: 'История',
       lessonType: 'зачет'
     },
     {

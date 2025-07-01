@@ -1,47 +1,91 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './LastMessages.scss';
-import {ChevronDown, ChevronUp} from 'lucide-react'
-import { LastMessageProps } from './LastMessagesProps';
+import useTimeAgo from '../hooks/useTimeAgo';
+
+  const mockMessages = [
+  {
+    id: 1,
+    author: 'Аль-Нами',
+    title: 'Церемония награждения',
+    sentAt: new Date('2025-06-30T21:51:00'), 
+  },
+  {
+    id: 2,
+    author: 'Акимов',
+    title: 'Правила проведения мероприятия',
+    sentAt: new Date('2025-06-30T11:55:00'),
+  },
+  {
+    id: 3,
+    author: 'Шабанов',
+    title: 'Лабораторная работа №2',
+    sentAt: new Date('2025-06-30T11:30:00'),
+  },
+  {
+    id: 4,
+    author: 'Ликарь',
+    title: 'Шаблон отчета практического занятия',
+    sentAt: new Date('2025-06-30T11:00:00'),
+  },
+  {
+    id: 5,
+    author: 'Любимов',
+    title: 'Учебник_2024_01_02',
+    sentAt: new Date('2025-06-30T10:00:00'),
+  },
+];
+
 
 
 export default function LastMessages() {
-    const [isOpen, setIsOpen] = useState(false);
-    const messages = new Map([
-        ['Аль-Нами', 'Церемония награждения'],
-        ['Акимов', 'Правила проведения мероприятия'],
-        ['Шабанов', 'Лабораторная работа №2'],
-        ['Ликарь', 'Шаблон отчета практического занятия'],
-        ['Любимов', 'Учебник_2024_01_02']
-        ]);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+  
+
         //TODO: Реализовать запрос с бекенда через useEffect
     return (
         <div>
-            <div className="last-messages-container rounded-lg shadow-lg "
-                onClick={() => setIsOpen(!isOpen)}
+           <div className="w-[90vw] bg-white rounded-lg shadow-md p-3">
+          <div className="flex items-center justify-between mb-3 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+            <h3 className="text-base font-semibold text-gray-800">Последние сообщения</h3>
+            <button
+              className="text-gray-600 focus:outline-none transition-transform duration-300 ease-in-out"
+              style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
             >
-                <button 
-                className='droplist-btn'
-                
-                >{isOpen ? <ChevronUp /> : <ChevronDown />}</button>
-                <div className='label-message'>Последние сообщения</div>
-                {/*TODO: Добавить логику для отображения последних сообщений */}
-            </div>
-            {isOpen && (
-                    <div className='last-messages-list rounded-lg shadow-2xl mt-14'>
-                        <div className='mt-4'>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+          </div>
 
-                            {Array.from(messages.entries()).map(([author, theme], index) => (
-                                <div key={author} className={`${index === 0 ? "first-message flex flex-col items-start" : "message flex flex-col items-start"}`}>
-                                    <span className='message-name'>{author}.</span>
-                                    {/* TODO: написать алгоритм, чтобы сообщение нормально сокращалось, и могло по максимуму влезть в видное окошко*/}
-                                    <span className='message-text'>{theme.length > 61 ? theme.slice(0, 61) + "..." : theme}</span>
-                            </div>
-                            ))}
-                     </div>
-
+          <div
+            className={`transition-all duration-300 ease-in-out overflow-hidden ${
+              isExpanded ? 'max-h-[32rem]' : 'max-h-38'
+            }`}
+          >
+            <div className="space-y-2">
+              {mockMessages.map((message) => (
+                <div
+                  key={message.id}
+                  className="cursor-pointer bg-gray-50 hover:bg-gray-100 rounded-lg p-2.5 transition-colors duration-200"
+                  onClick={() => alert(`Переход к сообщению "${message.title}"`)}
+                >
+                  <div className="flex items-start space-x-2">
+                    <div className="flex flex-col">
+                      <p className="text-xs font-medium text-gray-800">{message.author}</p>
+                      <p className="text-sm text-gray-600">{message.title}</p>
+                      <p className="text-xs text-gray-500">
+                        {useTimeAgo(message.sentAt)}
+                      </p>
                     </div>
-                )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         </div>
     )
 }
