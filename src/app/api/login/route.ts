@@ -1,12 +1,14 @@
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
+import { env } from "process";
 
 
 
 export async function POST(request: NextRequest) {
   const {email, password} = await request.json()
+
   try{
-    const res = await axios.post('http://192.168.0.181:80/login', 
+    const res = await axios.post(`${process.env.API_URL}/login`, 
       {
         email: email,
         password: password,

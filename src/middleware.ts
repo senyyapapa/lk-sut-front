@@ -29,9 +29,9 @@ export async function middleware(request: NextRequest) {
   }
 
 
-  if (refresh_token) {
+  if (!access_token) {
     try {
-      const res = await fetch('http://192.168.0.181:80/refresh', {
+      const res = await fetch(`${process.env.API_KEY}/refresh`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ refresh_token }),
