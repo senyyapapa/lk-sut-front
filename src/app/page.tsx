@@ -57,7 +57,7 @@ export default function Home(){
 
   return (
     <div className='flex justify-center flex-col items-center gap-6'>
-        <div className='mb-4 mt-[8vh]'>
+        <div className='mb-4 mt-[4vh]'>
           <Carousel 
           slides={slidesData}
           onSlideChange={handleSlideChange}

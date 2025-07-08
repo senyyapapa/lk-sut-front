@@ -31,7 +31,7 @@ export async function middleware(request: NextRequest) {
 
   if (!access_token) {
     try {
-      const res = await fetch(`${process.env.API_KEY}/refresh`, {
+      const res = await fetch(`${process.env.API_URL}/refresh`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ refresh_token }),
@@ -73,5 +73,5 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     '/((?!_next|api|login).*)',
-  ],
+  ], 
 }

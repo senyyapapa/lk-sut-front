@@ -23,7 +23,7 @@ export default function RootLayout({
       >
         <Sidebar />
         <Header />
-        <main>{children}</main>
+        <main className="pt-[8vh]">{children}</main>
       </body>
     </html>
   );
