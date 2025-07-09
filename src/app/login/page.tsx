@@ -60,7 +60,7 @@ export default function LoginPage() {
               type='email' 
               placeholder="Email"
               {...register('email')}
-              className={`input-login outline-none rounded-xl ${errors.email ? 'border-red-500' : ''}`}
+              className={`input-login outline-none rounded-xl ${errors.email ? 'border-red-400' : ''}`}
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
 
@@ -68,7 +68,7 @@ export default function LoginPage() {
               type='password' 
               placeholder="Пароль"
               {...register('password')}
-              className={`input-login outline-none rounded-xl ${errors.password ? 'border-red-500' : ''}`}
+              className={`input-login outline-none rounded-xl ${errors.password ? 'border-red-400' : ''}`}
             />
             {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
 
