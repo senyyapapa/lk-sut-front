@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/header/Header";
-import Sidebar from "@/components/sidebar/Sidebar";
-import BurgerBtn from "@/components/burger_button/BurgerBtn";
-
-
+import ConditionalLayout from "./conditionalLayout";
 
 
 export const metadata: Metadata = {
@@ -14,16 +10,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="ru">
-      <body
-      >
-        <Sidebar />
-        <Header />
-        <main className="pt-[8vh]">{children}</main>
+      <body>
+        <ConditionalLayout> {children} </ConditionalLayout>
       </body>
     </html>
   );
