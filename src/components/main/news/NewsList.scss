@@ -1,73 +1,72 @@
 .news-list-container {
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    height: 8vh;
-    width: 90vw;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  height: 8vh;
+  width: 90vw;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .label-news {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;	
-    font-weight: 600;
-
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .news-list {
-    width: 90vw;
-    background-color: transparent;
-    margin-top: 2vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-bottom: 4vh;
+  width: 90vw;
+  background-color: transparent;
+  margin-top: 2vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 4vh;
 }
 
 .news-card {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 0.5rem;
-    background-color: white;
-    backdrop-filter: blur(40px) ;
-    padding: 2vh;
-    box-shadow:  0 10px 15px -3px rgb(0 0 0 / 0.1)
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  background-color: white;
+  backdrop-filter: blur(40px);
+  padding: 2vh;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 .headers-font {
-    font-weight: 600;
-    font-size: 0.9rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .description-font {
-    font-weight: 400;
-    font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .news-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 .news-date {
-    font-size: 0.75rem;
-    color: #555;
+  font-size: 0.75rem;
+  color: #555;
 }
 
 .news-status {
-    background-color: #1f47ca;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem;
-    font-size: 0.75rem;
+  background-color: #1f47ca;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
 }
 .news-wrapper {
   transition: max-height 0.3s ease-in-out;

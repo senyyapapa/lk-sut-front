@@ -1,8 +1,7 @@
-'use client'
+"use client";
 import Header from "@/components/header/Header";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { usePathname } from "next/navigation";
-
 
 export default function ConditionalLayout({
   children,
@@ -13,11 +12,9 @@ export default function ConditionalLayout({
   const isLoginPage = pathname === "/login";
   return (
     <>
-    {!isLoginPage && <Sidebar />}
-    {!isLoginPage && <Header />}
-    <main className={isLoginPage ? "" : "pt-[8vh]"}>
-        {children}
-    </main>
+      {!isLoginPage && <Sidebar />}
+      {!isLoginPage && <Header />}
+      <main className={isLoginPage ? "" : "pt-[8vh]"}>{children}</main>
     </>
   );
 }

@@ -1,31 +1,29 @@
 .students-photo {
-    width: 150px;
-    height: 200px;
-    background-color: gray;
-    margin-left: 2vw;
-
+  width: 150px;
+  height: 200px;
+  background-color: gray;
+  margin-left: 2vw;
 }
 
- .profile-main-info {
-        font-size: 11pt;
-        h1 {
-            font-weight: bolder;
-        }
+.profile-main-info {
+  font-size: 11pt;
+  h1 {
+    font-weight: bolder;
+  }
 }
 
 .profile-other-info {
-    font-size: 11pt;
-    h1 {
-        font-weight: bolder;
-    }
+  font-size: 11pt;
+  h1 {
+    font-weight: bolder;
+  }
 }
 
-@media screen and (max-width: 375px){
-
-    .profile-main-info {
-        font-size: 10pt;
-    }
-    .profile-other-info {
-        font-size: 10pt;
-}
+@media screen and (max-width: 375px) {
+  .profile-main-info {
+    font-size: 10pt;
+  }
+  .profile-other-info {
+    font-size: 10pt;
+  }
 }
