@@ -10,13 +10,16 @@ function formatTimeAgo(date: Date): string {
   return `${Math.floor(secondsAgo / 86400)} дн назад`;
 }
 
-export default function useTimeAgo (date: Date, interval: number = 60000): string {
-    const [timeAgo, setTimeAgo] = useState(() => formatTimeAgo(date))
-    useEffect(() => {
-        const tick = () => setTimeAgo(formatTimeAgo(date))
-        tick()
-        const id = setInterval(tick, interval);
-        return () => clearInterval(id)
-    }, [date, interval])
-    return timeAgo
+export default function useTimeAgo(
+  date: Date,
+  interval: number = 60000
+): string {
+  const [timeAgo, setTimeAgo] = useState(() => formatTimeAgo(date));
+  useEffect(() => {
+    const tick = () => setTimeAgo(formatTimeAgo(date));
+    tick();
+    const id = setInterval(tick, interval);
+    return () => clearInterval(id);
+  }, [date, interval]);
+  return timeAgo;
 }

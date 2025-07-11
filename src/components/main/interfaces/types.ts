@@ -4,7 +4,7 @@ export interface SlideData {
   groupNumber: string;
   studentName: string;
   subject: string;
-  lessonType: 'лекция' | 'экзамен' | 'практика' | 'лабораторная' | 'зачет';
+  lessonType: "лекция" | "экзамен" | "практика" | "лабораторная" | "зачет";
   isActive?: boolean;
 }
 

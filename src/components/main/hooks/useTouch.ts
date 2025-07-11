@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback } from "react";
 
 interface TouchHandlers {
   onTouchStart: (e: React.TouchEvent) => void;
@@ -13,8 +13,8 @@ interface TouchHandlers {
 interface UseTouchProps {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
-  onDrag?: (offset: number) => void; 
-  onDragEnd?: () => void; 
+  onDrag?: (offset: number) => void;
+  onDragEnd?: () => void;
   threshold?: number;
 }
 
@@ -23,7 +23,7 @@ export const useTouch = ({
   onSwipeRight,
   onDrag,
   onDragEnd,
-  threshold = 50
+  threshold = 50,
 }: UseTouchProps): TouchHandlers => {
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const touchEnd = useRef<{ x: number; y: number } | null>(null);
@@ -37,21 +37,23 @@ export const useTouch = ({
     hasMoved.current = false;
   }, []);
 
-  const handleMove = useCallback((clientX: number, clientY: number) => {
-    if (!isDragging.current || !touchStart.current) return;
-    
-    touchEnd.current = { x: clientX, y: clientY };
-    const deltaX = touchStart.current.x - clientX;
-    const deltaY = touchStart.current.y - clientY;
-    
+  const handleMove = useCallback(
+    (clientX: number, clientY: number) => {
+      if (!isDragging.current || !touchStart.current) return;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      hasMoved.current = true;
-      if (onDrag) {
-        onDrag(deltaX);
+      touchEnd.current = { x: clientX, y: clientY };
+      const deltaX = touchStart.current.x - clientX;
+      const deltaY = touchStart.current.y - clientY;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        hasMoved.current = true;
+        if (onDrag) {
+          onDrag(deltaX);
+        }
       }
-    }
-  }, [onDrag]);
+    },
+    [onDrag]
+  );
 
   const handleEnd = useCallback(() => {
     if (!touchStart.current || !isDragging.current) {

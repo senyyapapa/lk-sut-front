@@ -70,64 +70,62 @@
   align-items: center;
 }
 
-%lessonType{
-    padding: 10px 20px;
-  }
+%lessonType {
+  padding: 10px 20px;
+}
 
-  .lection{
-    @extend %lessonType;
-    color: white;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    text-transform: uppercase;
-    background-color: rgb(32, 90, 215);//rgb(91, 148, 233);
-  }
-  .practice{
-    @extend %lessonType;
-    color: white;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    text-transform: uppercase;
-    background-color: rgb(192, 149, 69);
-  }
-  .lab{
-    @extend %lessonType;
-    color: white;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    text-transform: uppercase;
-    background-color: rgb(189, 61, 61);
-  }
+.lection {
+  @extend %lessonType;
+  color: white;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  background-color: rgb(32, 90, 215); //rgb(91, 148, 233);
+}
+.practice {
+  @extend %lessonType;
+  color: white;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  background-color: rgb(192, 149, 69);
+}
+.lab {
+  @extend %lessonType;
+  color: white;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  background-color: rgb(189, 61, 61);
+}
 
-  .ekz {
-    @extend %lessonType;
-    color: white;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    text-transform: uppercase;
-    background-color: #767676;
-  }
+.ekz {
+  @extend %lessonType;
+  color: white;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  background-color: #767676;
+}
 
-  .zach {
-    @extend %lessonType;
-    color: white;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    text-transform: uppercase;
-    background-color: #767676;
-  }
-
-
+.zach {
+  @extend %lessonType;
+  color: white;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  background-color: #767676;
+}
 
 .markButton {
   background: #e67e22;
@@ -208,69 +206,66 @@
     margin: 0;
     border-radius: 0.5rem;
   }
-  
+
   .slide {
     padding: 18px 15px;
     min-height: 125px;
   }
-  
- .subject {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  font-size: clamp(16px, 3vw, 24px);
-  font-weight: 700;
-  color: #2c3e50;
-  text-align: center;
-  margin-bottom: 16px;
-  line-height: 1.2;
-  max-width: 100%;
-}
 
+  .subject {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    max-width: 100%;
+  }
 
-  
   .slideHeader {
-      font-size: clamp(12px, 3vw, 24px);
+    font-size: clamp(12px, 3vw, 24px);
 
     margin-bottom: 18px;
   }
-  
+
   %lessonType,
   .markButton {
     padding: 10px 20px;
     font-size: clamp(12px, 3vw, 24px);
-
   }
 
-  .lection{
+  .lection {
     @extend %lessonType;
     color: white;
     border-radius: 24px;
-      font-size: clamp(12px, 3vw, 24px);
+    font-size: clamp(12px, 3vw, 24px);
     font-weight: 600;
     border: none;
     text-transform: uppercase;
-    background-color: rgb(32, 90, 215);//rgb(91, 148, 233);
+    background-color: rgb(32, 90, 215); //rgb(91, 148, 233);
   }
-  .practice{
+  .practice {
     @extend %lessonType;
     color: white;
     border-radius: 24px;
-      font-size: clamp(12px, 3vw, 24px);
+    font-size: clamp(12px, 3vw, 24px);
     font-weight: 600;
     border: none;
     text-transform: uppercase;
     background-color: rgb(192, 149, 69);
   }
-  .lab{
+  .lab {
     @extend %lessonType;
     color: white;
     border-radius: 24px;
-      font-size: clamp(12px, 3vw, 24px);
+    font-size: clamp(12px, 3vw, 24px);
     font-weight: 600;
     border: none;
     text-transform: uppercase;
@@ -282,11 +277,11 @@
     height: 40px;
     font-size: 18px;
   }
-  
+
   .prevArrow {
     left: 12px;
   }
-  
+
   .nextArrow {
     right: 12px;
   }

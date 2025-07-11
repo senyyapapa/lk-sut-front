@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ConditionalLayout from "./conditionalLayout";
 
-
 export const metadata: Metadata = {
   title: "Личный кабинет",
-  description: "Личный кабинет для студентов и преподавателей университета СПбГУТ",
+  description:
+    "Личный кабинет для студентов и преподавателей университета СПбГУТ",
 };
 
 export default function RootLayout({
