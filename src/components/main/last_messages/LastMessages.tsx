@@ -42,12 +42,12 @@ export default function LastMessages() {
   //TODO: Реализовать запрос с бекенда через useEffect
   return (
     <div>
-      <div className="w-[90vw] bg-white rounded-lg shadow-md p-3">
+      <div className="last-message-container w-[90vw] rounded-lg shadow-md p-3">
         <div
           className="flex items-center justify-between mb-3 cursor-pointer"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          <h3 className="text-base font-semibold text-gray-800">
+          <h3 className="text-base font-semibold">
             Последние сообщения
           </h3>
           <button
@@ -82,16 +82,16 @@ export default function LastMessages() {
             {mockMessages.map((message) => (
               <div
                 key={message.id}
-                className="cursor-pointer bg-gray-50 hover:bg-gray-100 rounded-lg p-2.5 transition-colors duration-200"
+                className="last-messages-label"
                 onClick={() => alert(`Переход к сообщению "${message.title}"`)}
               >
                 <div className="flex items-start space-x-2">
                   <div className="flex flex-col">
-                    <p className="text-xs font-medium text-gray-800">
+                    <p className="message-sender">
                       {message.author}
                     </p>
-                    <p className="text-sm text-gray-600">{message.title}</p>
-                    <p className="text-xs text-gray-500">
+                    <p className="message-title">{message.title}</p>
+                    <p className="message-date">
                       {useTimeAgo(message.sentAt)}
                     </p>
                   </div>
