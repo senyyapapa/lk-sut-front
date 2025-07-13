@@ -3,7 +3,7 @@
   width: 90vw;
   overflow: hidden;
   border-radius: 0.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px var(--color-text-alpha-02);
 }
 
 .slidesContainer {
@@ -14,7 +14,7 @@
 
 .slide {
   min-width: 100%;
-  background: #dbd9d9;
+  background: var(--color-slide);
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
@@ -34,16 +34,16 @@
   margin-bottom: 40px;
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-alpha);
 }
 
 .currentInfo {
-  color: #666;
+  color: var(--color-text-info);
 }
 
 .studentName {
   text-align: right;
-  color: #333;
+  color: var(--color-text-alpha);
   font-weight: 600;
 }
 
@@ -59,7 +59,7 @@
 .subject {
   font-size: 32px;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--color-text-alpha);
   margin-bottom: 40px;
   line-height: 1.2;
 }
@@ -82,7 +82,7 @@
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  background-color: rgb(32, 90, 215); //rgb(91, 148, 233);
+  background-color: var(--color-blue);
 }
 .practice {
   @extend %lessonType;
@@ -92,7 +92,7 @@
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  background-color: rgb(192, 149, 69);
+  background-color: var(--color-orangered);
 }
 .lab {
   @extend %lessonType;
@@ -102,7 +102,7 @@
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  background-color: rgb(189, 61, 61);
+  background-color: var(--color-red);
 }
 
 .ekz {
@@ -113,7 +113,7 @@
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  background-color: #767676;
+  background-color: var(--color-text-info);
 }
 
 .zach {
@@ -124,11 +124,11 @@
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  background-color: #767676;
+  background-color: var(--color-text-info);
 }
 
 .markButton {
-  background: #e67e22;
+  background: var(--color-orange);
   color: white;
   padding: 12px 24px;
   border-radius: 24px;
@@ -141,12 +141,12 @@
 }
 
 .markButton:active {
-  background-color: #c56c1e;
+  background-color: var(--color-text-alpha);
 }
 
 .indicators {
   position: absolute;
-  bottom: 12px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -158,13 +158,13 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--color-form-login);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .indicator.active {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-bg);
   transform: scale(1.2);
 }
 
@@ -172,7 +172,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--color-text-alpha-02);
   border: none;
   width: 48px;
   height: 48px;
@@ -188,7 +188,7 @@
 }
 
 .navigationArrows:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--color-text-alpha-02);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -222,7 +222,7 @@
     overflow-wrap: break-word;
     font-size: clamp(16px, 3vw, 24px);
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-text-alpha);
     text-align: center;
     margin-bottom: 16px;
     line-height: 1.2;
@@ -249,7 +249,7 @@
     font-weight: 600;
     border: none;
     text-transform: uppercase;
-    background-color: rgb(32, 90, 215); //rgb(91, 148, 233);
+    background-color: var(--color-blue);
   }
   .practice {
     @extend %lessonType;
@@ -259,7 +259,7 @@
     font-weight: 600;
     border: none;
     text-transform: uppercase;
-    background-color: rgb(192, 149, 69);
+    background-color: var(--color-orangered);
   }
   .lab {
     @extend %lessonType;
@@ -269,7 +269,7 @@
     font-weight: 600;
     border: none;
     text-transform: uppercase;
-    background-color: rgb(189, 61, 61);
+    background-color: var(--color-red);
   }
 
   .navigationArrows {

@@ -1,0 +1,9 @@
+@use "light_styles.scss";
+@use "dark_styles.scss";
+@use "tailwindcss";
+
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-black);
+}

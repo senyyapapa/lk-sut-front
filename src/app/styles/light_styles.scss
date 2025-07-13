@@ -1,0 +1,24 @@
+:root {
+  --color-bg: whitesmoke;
+  --color-login-bg: linear-gradient(
+    164deg,
+    rgb(113, 113, 113) 0%,
+    rgb(138, 138, 138) 50%,
+    rgb(154, 152, 152) 100%
+  );
+  --color-label: rgb(232, 232, 232);
+  --color-label-hover: rgb(203, 203, 203);
+  --color-form-login: rgb(192, 192, 192);
+  --color-slide: #dbd9d9;
+
+  --color-orange: #F7941D;
+  --color-red: rgb(189, 61, 61);
+  --color-blue: rgb(32, 90, 215);
+  --color-orangered: rgb(192, 149, 69);
+
+  --color-black: black;
+
+  --color-text-alpha-02: rgba(0, 0, 0, 0.2);
+  --color-text-alpha: #333;
+  --color-text-info: #666;
+}

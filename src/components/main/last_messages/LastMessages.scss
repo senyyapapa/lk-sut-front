@@ -1,49 +1,35 @@
+h3 {
+  color: var(--color-text-alpha);
+}
+
 .last-messages-container {
-  display: flex;
-  background-color: #dbd9d9;
-  height: 8vh;
-  width: 90vw;
+  background-color: red;
+}
+
+.last-messages-label {
+  background-color: var(--color-label);
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  padding: 8px;
+  border-radius: 10px;
 }
 
-.label-message {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 15vw;
+.last-messages-label:hover {
+  background-color: var(--color-label-hover);
 }
 
-.droplist-btn {
-  display: flex;
-  align-items: center;
-  margin-left: 5vw;
-  cursor: pointer;
+.message-sender {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-alpha)
 }
 
-.last-messages-list {
-  width: 90vw;
-  background-color: whitesmoke;
-  padding-bottom: 8px;
-  margin-top: -2vh;
-  z-index: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.message-title {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--color-text-info);
 }
 
-.message-name {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.message {
-  border-top: 1px solid rgba(22, 22, 22, 0.299);
-  padding-left: 2vw;
-}
-
-.first-message {
-  padding-left: 2vw;
+.message-date {
+  font-size: 10px;
+  color: var(--color-black);
 }

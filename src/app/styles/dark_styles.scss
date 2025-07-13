@@ -1,0 +1,23 @@
+.dark-theme {
+  --color-bg: #242424;
+  --color-login-bg: linear-gradient(
+    164deg,
+    rgb(40, 40, 40) 0%,
+    rgb(25, 25, 25) 50%,
+    rgb(18, 18, 18) 100%
+  );
+  --color-label: rgb(61, 61, 61);
+  --color-label-hover: rgb(98, 98, 98);
+  --color-form-login: #2a2a2a;
+  --color-slide: #2e2e2e;
+
+  --color-orange: #F7941D; 
+  --color-red: rgb(189, 61, 61); 
+  --color-blue: rgb(32, 90, 215); 
+
+  --color-black: white;
+
+  --color-text-alpha-02: rgba(255, 255, 255, 0.3);
+  --color-text-alpha: #f0f0f0;
+  --color-text-info: #aaa;
+}

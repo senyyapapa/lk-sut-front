@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+// import { useColorScheme } from 'react-native-appearance';
 import "./ChangeBtn.scss";
 
 const ChangeBtn = () => {
@@ -8,12 +9,15 @@ const ChangeBtn = () => {
     return savedTheme == "dark";
   });
 
+  // const colorScheme = useColorScheme();
+
   useEffect(() => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 
   const toggleTheme = () => {
     setIsDark(!isDark);
+    document.body.classList.toggle('dark-theme');
   };
 
   console.log("Тема:", isDark ? "dark" : "light");
