@@ -16,7 +16,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.59.0",
-    "react-native": "^0.80.1",
     "sass": "^1.89.2",
     "styled-components": "^6.1.19",
     "swiper": "^11.2.8",
