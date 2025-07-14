@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.scss";
 import ConditionalLayout from "./conditionalLayout";
+import ThemeScript from "@/components/main/hooks/useTheme";
 
 export const metadata: Metadata = {
   title: "Личный кабинет",
@@ -15,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <ConditionalLayout> {children} </ConditionalLayout>
       </body>

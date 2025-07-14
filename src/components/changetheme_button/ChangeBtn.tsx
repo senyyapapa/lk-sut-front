@@ -8,35 +8,22 @@ const ChangeBtn = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches; 
-    
-    // const initialThemeIsDark = savedTheme ? savedTheme === "dark" : prefersDark;
-
-    // setIsDark(initialThemeIsDark);
-    setIsDark(prefersDark);
-
-
-    if (prefersDark) {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
+    const isActuallyDark = document.documentElement.classList.contains('dark-theme');
+    setIsDark(isActuallyDark);
   }, []); 
 
   const toggleTheme = () => {
     const newIsDark = !isDark;
-    setIsDark(newIsDark); 
+    setIsDark(newIsDark);
 
     if (newIsDark) {
-      document.body.classList.add("dark-theme");
+      document.documentElement.classList.add("dark-theme");
       localStorage.setItem("theme", "dark");
     } else {
-      document.body.classList.remove("dark-theme");
+      document.documentElement.classList.remove("dark-theme");
       localStorage.setItem("theme", "light");
     }
+    console.log("тема:", newIsDark ? "тёмная" : "светлая");
   };
 
   return (
