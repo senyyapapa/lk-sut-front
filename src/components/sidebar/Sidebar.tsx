@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import BurgerBtn from "../burger_button/BurgerBtn";
 import "./sidebar.scss";
+import Seacrh from "../seacrh/Search";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,9 @@ export default function Sidebar() {
         <>
           <div className={`sidebar ${isClosing ? "sidebarClose" : ""}`}>
             <div className="h-[8vh] shadow-lg w-full"></div>
-            <div></div>
+            <div className="flex justify-center">
+              <Seacrh />
+            </div>
           </div>
           <div
             className={`shadow ${isClosing ? "shadowClose" : ""}`}

@@ -51,7 +51,7 @@ export default function SheduleCalendar({currentData, setCurrentData} : SheduleP
     for (let day = 1; day <= daysInMonth; day++) {
     calendarDays.push(<div key={day} onClick={() => choseDay(day)} className={currentData.getDate() == day ? "calendar-day-selected " : "calendar-day" }>{day}</div>);
     }
-    const mothName = currentData.toLocaleString('default', { month: 'long' })
+    const mothName = currentData.toLocaleString('ru-RU', { month: 'long' })
     const monthFormating = mothName.charAt(0).toUpperCase() + mothName.slice(1)
     const touchHandler = useTouch({
         onSwipeLeft: () => changeMonth(1),

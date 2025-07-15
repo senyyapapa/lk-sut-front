@@ -3,6 +3,7 @@ import "./styles/globals.scss";
 import ConditionalLayout from "./conditionalLayout";
 import ThemeScript from "@/hooks/useTheme";
 
+
 export const metadata: Metadata = {
   title: "Личный кабинет",
   description:
@@ -20,7 +21,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        <ConditionalLayout> {children} </ConditionalLayout>
+          <ConditionalLayout> {children} </ConditionalLayout>
       </body>
     </html>
   );
