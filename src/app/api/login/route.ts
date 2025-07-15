@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
     const res = await axios.post(`${process.env.API_URL}/login`, {
       email: email,
       password: password,
+      signal: AbortSignal.timeout(Number(process.env.FETCH_TIMEOUT))
     });
 
     const { access_token, refresh_token } = res.data;

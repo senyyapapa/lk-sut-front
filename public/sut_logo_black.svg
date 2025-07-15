@@ -1,0 +1,25 @@
+<svg width="900" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Kazimir';
+        src: url('data:font/woff2;base64,') format('woff2');
+      }
+      .main-text {
+        font-family: 'Kazimir', 'Times New Roman', serif;
+        font-size: 52px;
+        font-weight: normal;
+        fill: black;
+        text-anchor: middle;
+        letter-spacing: -1px;
+      }
+    </style>
+  </defs>
+  
+  <text x="450" y="120" class="main-text">
+    Ура выходной
+  </text>
+  <text x="610" y="115" style="font-family: 'Times New Roman', light; font-size: 36px; fill: black; text-anchor: start;">)</text>
+  <text x="620" y="116" style="font-family:'Times New Roman', light; font-size: 44px; fill: black; text-anchor: start;">)</text>
+  <text x="630" y="117" style="font-family: 'Times New Roman', light; font-size: 52px; fill: black; text-anchor: start;">)</text>
+</svg>
