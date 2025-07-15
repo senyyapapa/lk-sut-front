@@ -1,4 +1,4 @@
-import { SutLogo } from '@/images/SutLogo'
+import SutLogo  from '@/images/SutLogo'
 import './shedule_slide.scss'
 import { SheduleSlideProps } from './sheduleSlideProps'
 

@@ -2,6 +2,7 @@
 import SheduleCalendar from "@/components/shedule/Calendar";
 import { useState } from "react";
 import SheduleSlide from "@/components/shedule/SheduleSlide";
+
 export default function ShedulePage() {
     const [currentData, setCurrentData] = useState(new Date())
     const data = {
