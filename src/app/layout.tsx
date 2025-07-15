@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.scss";
 import ConditionalLayout from "./conditionalLayout";
+import ThemeScript from "@/components/main/hooks/useTheme";
 
 export const metadata: Metadata = {
   title: "Личный кабинет",
@@ -14,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
+    <html lang="ru" suppressHydrationWarning={true}>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <ConditionalLayout> {children} </ConditionalLayout>
       </body>
