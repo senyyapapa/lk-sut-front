@@ -5,12 +5,12 @@ import SheduleSlide from "@/components/shedule/SheduleSlide";
 export default function ShedulePage() {
     const [currentData, setCurrentData] = useState(new Date())
     const data = {
-    "startAt": "10:30",
-    "endAt": "12:00",
-    "typeLesson": "Практические занятия",
-    "name": "Универсальные программируемые интегральные схемы в киберфизических системах", 
-    "teacherName": "Алексеев Алексей Большевиков", 
-    "classroom": "404/2",
+    // "startAt": "10:30",
+    // "endAt": "12:00",
+    // "typeLesson": "Практические занятия",
+    // "name": "Универсальные программируемые интегральные схемы в киберфизических системах", 
+    // "teacherName": "Алексеев Алексей Большевиков", 
+    // "classroom": "404/2",
     }
     return (
         <div>
