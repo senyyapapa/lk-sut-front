@@ -1,12 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./ChangeBtn.scss";
-import Sun from "./svg/Sun";
-import Moon from "./svg/Moon";
+import Sun from "../../images/ThemeButton/Sun";
+import Moon from "../../images/ThemeButton/Moon";
 
 const ChangeBtn = () => {
   const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
     const isActuallyDark = document.documentElement.classList.contains('dark-theme');
     setIsDark(isActuallyDark);

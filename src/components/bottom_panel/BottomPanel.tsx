@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "./svg/Home";
-import Chats from "./svg/Chats";
-import Search from "./svg/Search";
-import Profile from "./svg/Profile";
-import Add from "./svg/Add";
+import Home from "@/images/BottomPanel/Home";
+import Chats from "@/images/BottomPanel/Chats";
+import Search from "@/images/BottomPanel/Search";
+import Profile from "@/images/BottomPanel/Profile";
+import Add from "@/images/BottomPanel/Add";
 
 const Radio = () => {
   return (

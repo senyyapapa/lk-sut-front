@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.scss";
 import ConditionalLayout from "./conditionalLayout";
-import ThemeScript from "@/components/main/hooks/useTheme";
+import ThemeScript from "@/hooks/useTheme";
 
 export const metadata: Metadata = {
   title: "Личный кабинет",
