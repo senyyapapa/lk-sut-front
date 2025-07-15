@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef, use } from "react";
 import { CarouselProps, SlideData } from "../interfaces/types";
-import { useTouch } from "../hooks/useTouch";
+import { useTouch } from "../../../hooks/useTouch";
 import styles from "./CarouselStyles.module.scss";
-import { enableScroll, disableScroll } from "../utils/scrollControl";
+import { enableScroll, disableScroll } from "../../../utils/Carousel/scrollControl";
 
 const Carousel: React.FC<CarouselProps> = ({ slides, onSlideChange }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
 
   if (access_token) {
     try {
-      const res = await fetch('http://31.134.144.194:80/checktoken', {
+      const res = await fetch(`${process.env.API_URL}/checktoken`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ access_token }),
@@ -25,13 +25,16 @@ export async function middleware(request: NextRequest) {
     }
   } else {
       try {
-        const res = await fetch('http://31.134.144.194:80/refresh', {
+        const res = await fetch(`${process.env.API_URL}/refresh`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ refresh_token }),
         })
 
-        if (!res.ok) throw new Error('Ошибка обновления токена')
+        if (!res.ok) {
+          return NextResponse.redirect(new URL('/login', request.url))
+
+        }
 
         const { access_token: newAccessToken, refresh_token: newRefreshToken } = await res.json()
 
@@ -67,6 +70,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!_next|api|login).*)',
+    '/((?!_next|api|login|).*)',
   ], 
 }

@@ -16,7 +16,7 @@ export default function Header() {
           <ChangeBtn />
           <a href="https://lms.spbgut.ru/">LMS</a>
           <Link href={pathname === "/" ? "/account" : "/"}>
-            {pathname === "/account" ? "Главная" : "Профиль"}
+            {pathname === "/" ? "Профиль" : "Главная"}
           </Link>
         </div>
       </div>

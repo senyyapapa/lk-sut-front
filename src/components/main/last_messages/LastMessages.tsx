@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import "./LastMessages.scss";
-import useTimeAgo from "../hooks/useTimeAgo";
+import useTimeAgo from "../../../hooks/useTimeAgo";
 
 const mockMessages = [
   {
