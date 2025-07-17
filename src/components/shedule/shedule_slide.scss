@@ -52,7 +52,16 @@
 .shedule-slide-empty {
     display: flex;
     justify-content: center;
-    margin-top: 4vh;
+    margin-top: -4vh;
     font-size: 1.2rem;
     color: var(--color-text-info)
+}
+
+.img-container {
+    height: 200px;
+    width: 400px;
+    background-image: var(--weekend);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

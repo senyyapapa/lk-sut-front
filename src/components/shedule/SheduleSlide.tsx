@@ -1,4 +1,3 @@
-import SutLogo  from '@/images/SutLogo'
 import './shedule_slide.scss'
 import { SheduleSlideProps } from './sheduleSlideProps'
 
@@ -7,7 +6,7 @@ export default function SheduleSlide({data} : SheduleSlideProps) {
     if (!data || Object.keys(data).length == 0) {
         return (
             <div className='shedule-slide-empty opacity-70'>
-                <SutLogo width={400} height={400}/>
+                <div className="img-container"></div>
             </div>
         )
     }
